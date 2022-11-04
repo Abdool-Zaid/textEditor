@@ -8,10 +8,12 @@ onMounted(() => {
     console.log(mainDIV.innerHTML)
   })
   let listeners= ()=>{
-localStorage.setItem('text',mainDIV.innerHTML) 
+    if (mainDIV.innerHTML!=undefined){
+      localStorage.setItem('text',mainDIV.innerHTML) 
+    }
 setTimeout(()=>{
   listeners()
-},1000)   
+},750)   
   }
   listeners()
 });
